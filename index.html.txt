@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Birthday Wish with 5 Memories</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fbc7a4, #f0e3ca);
+      color: #4d3b2b;
+      max-width: 350px;
+      height: 600px;
+      margin: auto;
+      padding: 20px 15px 25px;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #a55f25;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.85;
+      color: #6d4b25;
+    }
+
+    main {
+      flex: 1 1 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-gap: 14px;
+      overflow-y: auto;
+      padding-right: 6px; /* scrollbar space */
+      margin-bottom: 10px;
+    }
+
+    .memory-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(163, 114, 36, 0.3);
+      background: #f7f3e7;
+      cursor: default;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #d2be80;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(163, 114, 36, 0.5);
+      z-index: 2;
+    }
+
+    .memory-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-bottom: 3px solid #d2be80;
+      border-radius: 15px 15px 0 0;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .memory-caption {
+      padding: 8px 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #6b4a12;
+      text-align: center;
+      user-select: text;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+      color: #8e6b32;
+      user-select: text;
+    }
+
+    /* Custom scrollbar for main */
+    main::-webkit-scrollbar {
+      width: 6px;
+    }
+    main::-webkit-scrollbar-thumb {
+      background: rgba(163,114,36,0.3);
+      border-radius: 3px;
+    }
+
+    @media (max-width: 350px) {
+      main {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;
+      }
+      header h1 {
+        font-size: 1.9rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Birthday!</h1>
+    <p>5 Beautiful Memories to Celebrate</p>
+  </header>
+  <main>
+    <article class="memory-card">
+      <img class="memory-photo" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Memory 1" />
+      <div class="memory-caption">Our first adventure together</div>
+    </article>
+    <article class="memory-card">
+      <img class="memory-photo" src="https://images.unsplash.com/photo-1549887534-19822d60ce57?auto=format&fit=crop&w=400&q=80" alt="Memory 2" />
+      <div class="memory-caption">A day full of laughter</div>
+    </article>
+    <article class="memory-card">
+      <img class="memory-photo" src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Memory 3" />
+      <div class="memory-caption">The unforgettable sunset</div>
+    </article>
+    <article class="memory-card">
+      <img class="memory-photo" src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=400&q=80" alt="Memory 4" />
+      <div class="memory-caption">Celebrations and joy</div>
+    </article>
+    <article class="memory-card">
+      <img class="memory-photo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Memory 5" />
+      <div class="memory-caption">Forever friends</div>
+    </article>
+  </main>
+  <footer>
+    Wishing you many more wonderful memories ahead.
+  </footer>
+</body>
+</html>
